@@ -39,4 +39,14 @@ AWS Glue Data Catalog is a fully managed metadata repository that makes it easy 
 #### EC2 (Elastic Compute Cloud)
 Amazon EC2 provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
 
+## Setting Up SSH Key Permissions (Windows)
+If you encounter permission issues with your SSH key, follow these steps to fix it:
+
+1. Open a Command Prompt as an administrator.
+2. Run the following commands:
+
+   ```bash
+   icacls "C:\Your_Project_Path\kafka-stock-market-project.pem" /setowner "%USERNAME%"
+   icacls "C:\Your_Project_Path\kafka-stock-market-project.pem" /inheritance:r /grant:r "%USERNAME%:R"
+
 # Stock_Market_Realtime_Kafka_Project
